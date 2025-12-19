@@ -46,29 +46,16 @@ Soft-margin (full train) sweep:
 | Soft SVM (Linear) | 5 | 0.498316 | 0.481407 |
 | Soft SVM (RBF, σ=1) | 5 | 0.488296 | 0.481407 |
 
-## How to run
 
-1. Create an environment and install dependencies:
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate  # Windows: .venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
-
-2. Open the notebook:
-   ```bash
-   jupyter lab
-   ```
-   Then run: `notebooks/svm_kernel_methods_mnist_2v6.ipynb`.
 
 ## Repo structure
 
 - `notebooks/`
   - `svm_kernel_methods_mnist_2v6.ipynb`: main implementation and experiments
 - `docs/`
-  - `problem_statement.md`: short, clean spec for the work
+  - `problem_statement.md`: project specification outlining the dataset, task definition, constraints, and evaluation setup.
 
-## Notes for readers
+## Note:
 
 - The RBF kernel experiments use σ = 1 to match the experiment setting. In practice, σ and C need tuning for good generalization.
 - The soft-margin implementation is an SGD baseline meant for scalability on the full dataset; it is intentionally simple and can be improved with better tuning and feature scaling.
